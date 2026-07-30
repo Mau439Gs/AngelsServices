@@ -1,11 +1,54 @@
 @import url('https://fonts.cdnfonts.com/css/samsungone');
 
-@font-face {
-    font-family: 'MiFuentePropia';
-    src: url('{{ asset("fonts/helvetica-black.ttf") }}') format('ttf');
+:root {
+  --color-principal: #202F72;
+  --color-secundario: #000000;
+  --color-terciario: #9B9D9E;
+}
+
+.navbar, .offcanvas{
+    background-color: #000000;
 }
 
 body {
+    width: 100%;
     font-family: 'SamsungOne', sans-serif;
     font-size: 17px;
+}
+
+@keyframes aparicion {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.aparicion {
+    opacity: 0;
+}
+
+.aparicion.visible {
+    animation: aparicion 1.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+
+.aviso {
+    background-color: var(--color-terciario);
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.fondo_oscuro {
+    background-color: var(--color-secundario);
+    color: white;
 }
