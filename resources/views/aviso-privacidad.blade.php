@@ -3,54 +3,49 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Titulo</title>
+        <title>Aviso de Privacidad</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="icon" type="image/x-icon" href="{{asset('img/Solo_Logo.png')}}">
         @vite(['resources/css/app.css'])
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary" style="border-bottom: 5px solid #00425C;">
+            <nav class="navbar navbar-dark fixed-top" style="background-color: #000000;">
                 <div class="container-fluid">
-
-                    <div class="container">
-                        <a class="navbar-brand" style="font-size: 20px; margin:0;" href="{{ url('/') }}">
-                            <img src="{{ asset('img/angel_oscuro.svg') }}" alt="SERVINTSA" style="height: 70px; width: auto; padding: 5px; border-radius: 8px;"> <b>ANGELS</b> SERVICES
-                        </a>
-                    </div>
-
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#miMenuNavegacion">
+                    <a class="navbar-brand" style="font-size: 20px; margin:0;" href="{{ url('/') }}">
+                        <img src="{{ asset('img/Solo_Logo.png') }}" style="height: 70px; width: auto; padding: 5px; border-radius: 8px;"> <b>ANGELS</b> SERVICE
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
-
-                    <div class="collapse navbar-collapse" id="miMenuNavegacion">
-                    <ul class="navbar-nav w-100 justify-content-end">
-                        <li class="nav-item text-nowrap">
-                        <a class="nav-link " href="{{ url('/') }}"><i class="bi bi-house"></i> Inicio</a>
-                        </li>
-                        <li class="nav-item text-nowrap">
-                        <a class="nav-link" href="{{ url('/quienes-somos') }}"><i class="bi bi-person-lines-fill"></i> ¿Quienes somos?</a>
-                        </li>
-                        <li class="nav-item text-nowrap">
-                        <a class="nav-link" href="{{ url('/servicios') }}"><i class="bi bi-wrench"></i> Servicios</a>
-                        </li>
-                        <li class="nav-item text-nowrap">
-                        <a class="nav-link" href="https://wa.me/5215644802701" target="_blank"><i class="bi bi-whatsapp"></i> Contacto</a>
-                        </li>
-                    </ul>
+                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav w-100 justify-content-end">
+                            <li class="nav-item text-nowrap">
+                            <a class="nav-link" href="{{ url('/') }}"><i class="bi bi-house"></i> Inicio</a>
+                            </li>
+                            <li class="nav-item text-nowrap">
+                            <a class="nav-link" href="https://wa.me/5215644802701" target="_blank"><i class="bi bi-whatsapp"></i> Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
                 </div>
-                </nav>
+            </nav>
         </header>
 
-        <div class="container-fluid p-5">
+        <div class="container-fluid p-5" style="margin-top: 90px;">
 
             <h1>Aviso de Privacidad</h1>
             <p>En cumplimiento con lo establecido por la Ley Federal de Protección de Datos Personales en Posesión de los Particulares
-                (la Ley),  BS SERVICE SHOP S.A. de C.V (en lo sucesivo el Centro de Servicio), con domicilio para efectos del
-                presente Aviso en Av. Cuauhtémoc No. 1093, colonia Vértiz Narvarte, Alcaldía Benito Juárez, Ciudad de México
-                C.P. 03600, pone a su disposición el presente aviso de privacidad, por virtud del cual permanentemente
+                (la Ley),  Angels Service Profesionales (en lo sucesivo el Centro de Servicio), con domicilio para efectos del
+                presente Aviso en Cto. Moisés Solana 117 Local 1, Zona Dos Extendida, Corregidora, Plaza Toritos, Santiago de Querétaro, Querétaro
+                C.P. 07670, pone a su disposición el presente aviso de privacidad, por virtud del cual permanentemente
                 buscarán que el tratamiento de sus datos personales y  datos personales sensibles (en lo sucesivo los Datos)
                 sea legítimo, controlado e informado, con la finalidad de garantizar la privacidad y el derecho a la
                 autodeterminación informativa de sus Datos.
@@ -70,13 +65,13 @@
                         La información que se recaba es aquella que permita ofrecer los servicios de diagnóstico, revisión, reparación, solución de problemas, consultoría y asesoría sobre los  productos electronicos,eléctricos, electrodoméstico, a efecto que el Centro de Servicio se ponga  en contacto con usted; información sobre su producto, atención de quejas y sugerencias;  formar un expediente, ya sea físico o en medios electrónicos, recabar información de carácter fiscal  y cualquier acción similar o conexa que el Centro de Servicio y Autorizado consideren conforme a su objeto social.
                     </li>
                     <li>
-                        Los detalles de sus Datos serán usados para los fines descritos con anterioridad y cualquier envío de información que usted haga hacia cualquiera de las áreas públicas del sitio de internet bsserviceshop.com.mx serán datos públicos y no serán considerados como Datos proporcionados al centro de servicio autorizado. En estos casos nosotros no tendremos control y no seremos responsables por las acciones de otros usuarios del sitio o de clientes con respecto a cualquier información que ponga en áreas públicas. Adicionalmente la información que usted envíe a las áreas públicas puede ser recolectada y utilizada por otros para enviarle mensajes no solicitados así como para otros propósitos
+                        Los detalles de sus Datos serán usados para los fines descritos con anterioridad y cualquier envío de información que usted haga hacia cualquiera de las áreas públicas del sitio de internet angels.mx serán datos públicos y no serán considerados como Datos proporcionados al centro de servicio autorizado. En estos casos nosotros no tendremos control y no seremos responsables por las acciones de otros usuarios del sitio o de clientes con respecto a cualquier información que ponga en áreas públicas. Adicionalmente la información que usted envíe a las áreas públicas puede ser recolectada y utilizada por otros para enviarle mensajes no solicitados así como para otros propósitos
                     </li>
                     <li>
                         No proporcionaremos su información personal a ningún tercero. No venderemos o rentaremos su información personal a ninguna otra organización salvo que la misma será remitida al centro de servicio autorizado. Sin embargo, si en el futuro nosotros vendemos nuestro negocio a una tercera parte, entonces pasaremos la base de datos con su información personal a la entidad compradora.
                     </li>
                      <li>
-                        Adicionalmente, el Centro de Servicio Autorizado pueden divulgar sus Datos si así deben hacerlo por ley o si de buena fe creen que esa acción es necesaria para: a) cumplir con la Ley o los mandatos de los procesos legales relacionados con el Centro de Servicio Autorizado; b) proteger y defender los derechos de propiedad de Bs service Shop sa de cv ;  c) actuar en circunstancias urgentes para proteger la seguridad personal de los empleados del Centro de Servicio Autorizado; o d) en razón de los servicios que proporcionan el Centro de Servicio Autorizado.
+                        Adicionalmente, el Centro de Servicio Autorizado pueden divulgar sus Datos si así deben hacerlo por ley o si de buena fe creen que esa acción es necesaria para: a) cumplir con la Ley o los mandatos de los procesos legales relacionados con el Centro de Servicio Autorizado; b) proteger y defender los derechos de propiedad de Angels Service ;  c) actuar en circunstancias urgentes para proteger la seguridad personal de los empleados del Centro de Servicio Autorizado; o d) en razón de los servicios que proporcionan el Centro de Servicio Autorizado.
                     </li>
                 </ul>
             </p>
@@ -93,7 +88,7 @@
                         El tratamiento de sus Datos será el que resulte necesario, adecuado y relevante en relación con las finalidades previstas en este Aviso de Privacidad.
                     </li>
                     <li>
-                        El Centro de Servicio Autorizado cumplen los principios de protección de Datos establecidos por la Ley y adoptan las medidas necesarias para su tratamiento. Lo anterior aplica aún y cuando estos Datos fueren tratados por un tercero a solicitud de Bs Service Shop SA de C.V.
+                        El Centro de Servicio Autorizado cumplen los principios de protección de Datos establecidos por la Ley y adoptan las medidas necesarias para su tratamiento. Lo anterior aplica aún y cuando estos Datos fueren tratados por un tercero a solicitud de Angels Service Profesionales SA de C.V.
                     </li>
                 </ol>
             </p>
@@ -105,7 +100,7 @@
                 Usted o, en su caso, su representante legal, podrá ejercer los derechos de acceso, rectificación, cancelación y oposición (ARCO) previstos en la Ley.
                 Sólo en los supuestos que precisa la Ley, el Centro de Servicio Autorizado no estarán obligados a cancelar Datos.<br><br>
                 La solicitud de acceso, rectificación, cancelación u oposición deberá enviarse por correo electrónico, acorde con lo siguiente:
-                Tratándose de actividades promocionales y promociones tratándose de actividades relacionadas con servicio a productos Electricos,Electronicos, electrodomésticos a  privacidad@bsserviceshop.com.mx ; y, BS SERVICE SHOP S.A. de C.V.
+                Tratándose de actividades promocionales y promociones tratándose de actividades relacionadas con servicio a productos Electricos ,Electronicos, electrodomésticos a  privacidad@angels.mx ; y, Angels Service Profesionales S.A. de C.V.
                 El correo electrónico deberá contener la siguiente información:<br>
                 <ol>
                     <li>
@@ -176,7 +171,7 @@
              <p>
 
                 Ocasionalmente podemos actualizar este aviso de privacidad.
-                Si se producen cambios importantes en este aviso, la nueva versión del mismo estará disponible en el sitio de Internet  https://bsserviceshop.com.mx
+                Si se producen cambios importantes en este aviso, la nueva versión del mismo estará disponible en el sitio de Internet  <a href="https://angels.mx">https://angels.mx</a>
             </p>
             <p>
                 <b>5.- Jurisdicción.</b>
@@ -203,10 +198,10 @@
                 Usted (El cliente) deberá reportar todas las fallas o defectos que hubiera percibido en su equipo, así como proporcionar toda la información necesaria para la creación de la Orden de Reparación y el registro en el Centro de Servicio Autorizado para el Servicio Postventa.
             </p>
             <p>
-                El cliente deberá presentar un documento de identificación oficial en el momento de ingresar el equipo a reparación y suministrar los datos que le solicite el personal de administración de clientes del Centro de Servicio Autorizado. La elaboración de copias de seguridad de los programas y archivos contenidos en el equipo son responsabilidad del cliente, Bs Service Shop S.A de C.V. no se harán responsables por el respaldo o pérdida de información, programas, software, datos, archivos y cualquier información, de forma total o parcial contenida en el equipo que someta a revisión o reparación del Centro de Servicio autorizado Autorizado.
+                El cliente deberá presentar un documento de identificación oficial en el momento de ingresar el equipo a reparación y suministrar los datos que le solicite el personal de administración de clientes del Centro de Servicio Autorizado. La elaboración de copias de seguridad de los programas y archivos contenidos en el equipo son responsabilidad del cliente, Angels Service Profesionales S.A de C.V. no se harán responsables por el respaldo o pérdida de información, programas, software, datos, archivos y cualquier información, de forma total o parcial contenida en el equipo que someta a revisión o reparación del Centro de Servicio autorizado Autorizado.
             </p>
             <p>
-                El cliente es responsable de los accesorios que no relacione en el momento de recepción del equipo. El cliente deberá revisar el estado cosmético del equipo en el momento de la entrega en el Centro de Servicio Autorizado, así como al momento de su retiro del mismo.  Bs Service Shop, S.A. de C.V. no se hacen responsable por los daños cosméticos que tengan los equipos y que no sean reportados antes del retiro del equipo por parte del Cliente. De la misma manera, el centro de servicio autorizado tampoco será responsable de aquellos daños cosméticos que no hayan sido relacionados en el momento de la recepción del equipo (documento firmado por el Cliente al dejar su equipo para trámite de garantía).
+                El cliente es responsable de los accesorios que no relacione en el momento de recepción del equipo. El cliente deberá revisar el estado cosmético del equipo en el momento de la entrega en el Centro de Servicio Autorizado, así como al momento de su retiro del mismo.  Angels Service Profesionales, S.A. de C.V. no se hacen responsable por los daños cosméticos que tengan los equipos y que no sean reportados antes del retiro del equipo por parte del Cliente. De la misma manera, el centro de servicio autorizado tampoco será responsable de aquellos daños cosméticos que no hayan sido relacionados en el momento de la recepción del equipo (documento firmado por el Cliente al dejar su equipo para trámite de garantía).
             </p>
             <p>
                 En caso de pérdida del equipo dentro de las instalaciones del Centro de Servicio Autorizado, a causa de incendio, sismo o cualquier otra causa derivada de caso fortuito o fuerza mayor, el centro de Servicio Autorizado no se harán responsables. Por cualquier otra causa imputable al Centro de Servicio Autorizado, el Centro asumirá el pago del valor reconocido por la compañía de seguros.
@@ -222,48 +217,14 @@
              <p>
                 Para ejercer derechos ARCO, revocación de consentimiento, dudas de privacidad o reportes de incidentes de seguridad, puedes escribir a:
                 <ul>
-                    <li>Privacidad / ARCO: privacidad@bsserviceshop.com.mx</li>
-                    <li>Datos personales / atención al titular: datos@bsserviceshop.com.mx</li>
-                    <li>Seguridad (vulnerabilidades / incidentes): seguridad@bsserviceshop.com.mx</li>
+                    <li>Privacidad / ARCO: privacidad@angels.mx</li>
+                    <li>Datos personales / atención al titular: datos@angels.mx</li>
+                    <li>Seguridad (vulnerabilidades / incidentes): seguridad@angels.mx</li>
                 </ul>
-                Sitio administrado por: BS Service Shop S.A. de C.V. (bsserviceshop.com.mx)
+                Sitio administrado por: Angels Service Profesionales S.A. de C.V. (angels.mx)
             </p>
         </div>
 
-        <footer class="container-fluid" style="margin-top: 5%;">
-            <div class="row text-center" style="background-color: #00425C; padding: 3%;">
-                <div class="col">
-                    <p class="text-white" style="font-size: 30px;">
-                        <img src="{{ asset('img/angel.svg') }}" alt="SERVINTSA" style="height: 140px; width: auto; padding: 5px; border-radius: 8px;"> <b>ANGELS</b> SERVICES
-                    </p>
-                </div>
-                <div class="col">
-                    <a href="{{ url('/') }}" class="text-white text-decoration-none">Inicio</a><br>
-                    <a href="{{ url('/quienes-somos') }}" class="text-white text-decoration-none">¿Quienes somos?</a><br>
-                    <a href="{{ url('/servicios') }}" class="text-white text-decoration-none">Servicios</a><br>
-                    <a href="#" class="text-white text-decoration-none">Contacto</a><br>
-                </div>
-                <div class="col">
-                    <p class="text-white">Contáctanos:</p>
-                    <p class="text-white"><i class="bi bi-whatsapp"></i> +52 442 123 4567</p>
-                    <p class="text-white"><i class="bi bi-envelope"></i> info@angelservice.com</p>
-                    <p class="text-white">Nuestras redes:</p>
-                    <a href="#" class="text-white text-decoration-none"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="text-white text-decoration-none"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="text-white text-decoration-none"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#" class="text-white text-decoration-none"><i class="bi bi-youtube"></i></a>
-                </div>
-            </div>
-            <div class="row text-center" style="background-color: #e9ecef; padding: 1%;">
-                <p>Copyright © 2026 Angels Services. Todos los derechos reservados. <a href="{{ url('/aviso-privacidad') }}" class="text-decoration-none">Aviso de Privacidad</a></p>
-            </div>
-        </footer>
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-        <style>
-            .color-change {
-                filter: hue-rotate(180deg) saturate(200%);
-            }
-        </style>
     </body>
 </html>
