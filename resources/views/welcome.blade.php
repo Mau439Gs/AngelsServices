@@ -39,7 +39,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="offcanvas offcanvas-end text-bg-black"
+                    <div class="offcanvas offcanvas-end bg-black"
                          tabindex="-1"
                          id="offcanvasNavbar"
                          aria-labelledby="offcanvasNavbarLabel">
@@ -289,7 +289,7 @@
                 </h1>
             </div>
 
-            <div class="card text-bg-black border-0"
+            <div class="card bg-black border-0"
                  style="
                     background-image: url('{{ asset('img/TESTIMONIOS-FONDO.png') }}');
                     background-position: center;
